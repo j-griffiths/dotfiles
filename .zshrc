@@ -19,15 +19,6 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-# Set the directory we want to store tmux plugins
-TPM_DIR="$HOME/.config/tmux/plugins/tpm"
-
-# Download tpm, if it's not there yet
-if [ ! -d "$TPM_DIR" ]; then
-   mkdir -p "$(dirname $TPM_DIR)"
-   git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
-fi
-
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
